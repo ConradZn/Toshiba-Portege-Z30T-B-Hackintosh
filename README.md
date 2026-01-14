@@ -42,6 +42,12 @@ Before installation ensure your BIOS is set as follows
 * **CSM:** Disabled (UEFI and UEFI Legacy only)
 * **SATA Mode:** AHCI (Automatic)
 
+**⚠️ Mandatory Installation Steps**
+
+* **SMBIOS Generation:** You **must generate** your own unique serial numbers (Serial, Board Serial, UUID) for model **MacBookPro14,1** using GenSMBIOS before booting to ensure iServices work and to avoid conflicts
+* **WiFi Kext:** Replace `AirportItlwm.kext` in `EFI/OC/Kexts` with the correct version for your specific OS (If you want newer version like Sonoma to Tahoe)
+* **Graphics:** Post-install patching using **OpenCore Legacy Patcher** is required to enable Intel HD 5500 graphics acceleration
+
 ## 📥 Installation
 
 1. Download the latest release from this repository
@@ -51,10 +57,6 @@ Before installation ensure your BIOS is set as follows
 5. Boot from USB and perform the installation
 6. After installation copy the EFI from USB to the EFI partition of the notebook drive
 7. Run OCLP if you are on Ventura for graphics patching
-
-Zde je aktualizovaná tabulka s přidaným ComboJackem
-
-Pro tento model (Broadwell laptop) a obecně pro efektivní správu Hackintoshe bych doporučil doplnit tabulku o tyto nástroje, které jsou pro uživatele velmi praktické
 
 ## 🛠 Recommended Utilities
 
