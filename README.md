@@ -1,4 +1,4 @@
-# Toshiba Portege Z30T-B (OpenCore EFI)
+# Toshiba Portege Z30T-B (Updated OpenCore EFI) (Lost access to Original Account TheDeusRa)
 
 <img width="1920" height="1392" alt="macOS Toshiba Portege Z30TB" src="https://github.com/user-attachments/assets/4c0ec948-d5b6-4f20-b17b-3f67cfc845f1" />
 
@@ -44,25 +44,6 @@ The goal is to provide a stable and compatible OpenCore setup for macOS Monterey
 - Wake from fingerprint
 
 ---
-
-### 🟢 macOS Sonoma confirmed working
-
-<img width="1600" height="900" alt="Snímek obrazovky 2025-10-07 v 5 26 04" src="https://github.com/user-attachments/assets/e809003b-61d2-4ccc-8fe6-e3a53c2869c7" />
-
-As of 2025, macOS **Sonoma 14.x** runs successfully on the **Toshiba Portege Z30-B (i7-5500U, Intel HD 5500)** using **OpenCore + OCLP 2.4.1**.
-
-- Full graphics acceleration after OCLP **Post-Install Root Patch** (Broadwell GPU)  
-- Wi-Fi works with `AirportItlwm.kext` (Sonoma 14.4 build)  
-- SMBIOS: `MacBookPro15,1`  
-- Upgrade from Monterey → Sonoma completed without issues  
-- System stable and fully usable  
-> Tested and confirmed functional configuration (EFI + OCLP).
-
-## ❌ Not Working
-
-- **Fingerprint reader** (Validity/Elan – not supported by macOS)
-- Wake from fingerprint
-- iServices (iMessage and FaceTime) - Switch kext
 
 ### 🎧 Audio Jack & Scrolling Enhancements
 
@@ -116,9 +97,8 @@ For smoother and more natural **scrolling behavior**, you can also install
 
 | Status | Details |
 |--------|----------|
-| macOS Compatibility | ✅ Monterey (12.x), ✅ Sonoma (14.x) |
+| macOS Compatibility | ✅ Monterey (12.x) ✅ Ventura (13.x) ✅ Sonoma (14.x) |
 | Stability | ✅ Daily-driver ready |
-| Fingerprint Reader | ❌ Not supported |
 | Audio Jack | ✅ With ComboJack |
 | Scrolling | ✅ With Discrete Scroll |
 
