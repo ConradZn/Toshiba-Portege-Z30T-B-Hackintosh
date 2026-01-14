@@ -1,118 +1,72 @@
-# Toshiba Portege Z30T-B (Updated OpenCore EFI) (Lost access to Original Account TheDeusRa)
+# OpenCore EFI for Toshiba Portege Z30T-B (Ventura+) (STABLE)
 
-<img width="1920" height="1392" alt="macOS Toshiba Portege Z30TB" src="https://github.com/user-attachments/assets/4c0ec948-d5b6-4f20-b17b-3f67cfc845f1" />
+## ⚠️ About TheDeusRa Repo:
+(Updated OpenCore EFI) (Lost access to Original Account TheDeusRa)
 
-This repository contains a fully working EFI configuration for **Toshiba Portege Z30T-B** with **Intel Core i7-5500U (Broadwell-U)** and **Intel HD 5500** graphics.  
-The goal is to provide a stable and compatible OpenCore setup for macOS Monterey and Sonoma.
+<img width="1920" height="1080" alt="BG" src="https://github.com/user-attachments/assets/c1f5ae95-dca0-4c86-94ea-3dfc5db68bbc" />
+
+This repository contains a complete OpenCore EFI configuration for the Toshiba Portege Z30T-B, optimized specifically for macOS Ventura and newer versions using OpenCore Legacy Patcher for graphics support
+---
+
+## 💻 Hardware Specifications
+
+| Component | Specification | Status |
+| --- | --- | --- |
+| **CPU** | Intel Core i5/i7 (Broadwell) 5th Gen | ✅ Working |
+| **GPU** | Intel HD Graphics 5500 | ✅ Working (see notes) |
+| **RAM** | DDR3L 1600MHz 8GB | ✅ Working |
+| **Display** | 13.3" Display | ✅ Working |
+| **Audio** | Realtek ALC255 | ✅ Working |
+| **Ethernet** | Intel I218-LM | ✅ Working |
+| **Wi-Fi/BT** | Intel Wireless-AC 7265 | ✅ Working (with AirportItlwm) |
+| **Trackpad** | ALPS / Synaptics | ✅ Working (VoodooPS2) |
+
+## 🚀 macOS Ventura & Newer Support
+
+This EFI includes a specially tuned configuration file ensuring compatibility across versions
+
+* **Ventura (macOS 13) and newer**
+* Booting is handled by the same EFI
+* **Important:** For full graphics acceleration on Broadwell (HD 5500) in Ventura, you must use **OpenCore Legacy Patcher (OCLP)** post-install
+* **[Download OCLP Here](https://github.com/dortania/OpenCore-Legacy-Patcher/releases)**
+* Kexts are configured not to block booting of newer systems
 
 ---
 
-## 🧠 Hardware
+## ⚙️ BIOS Settings
 
-| Component | Model / Version |
-|------------|----------------|
-| Laptop | Toshiba Portege Z30T-B |
-| CPU | Intel Core i7-5500U (2C/4T, Broadwell-U) |
-| GPU | Intel(R) HD Graphics 5500 (2 GB) |
-| RAM | 8–16 GB DDR3L |
-| Storage | SATA / NVMe SSD (both supported) |
-| Wi-Fi + Bluetooth | Intel (Itlwm + IntelBluetoothFirmware) |
-| Audio | Realtek ALC2xx |
-| Touchpad / Keyboard | PS2 (VoodooPS2Controller) |
-| Display | 13.3" FHD Touchscreen (fully functional) |
-| Fingerprint Reader | **Not supported** |
+Before installation ensure your BIOS is set as follows
 
----
+* **Secure Boot:** Disabled
+* **VT-d:** Disabled (or use DisableIoMapper in config)
+* **Fast Boot:** Disabled
+* **CSM:** Disabled (UEFI and UEFI Legacy only)
+* **SATA Mode:** AHCI (Automatic)
 
-## ✅ Working Features
+## 📥 Installation
 
-- Intel HD5500 with full acceleration (QE/CI, HDMI, external monitor)
-- Audio via AppleALC (`layout-id=3`)
-- Sleep / wake / battery reporting
-- Touchpad & keyboard (VoodooPS2Controller)
-- Wi-Fi + Bluetooth (IntelWireless drivers)
-- Power management
-- USB ports (custom map under 15-port limit)
-- SD card reader (Sinetek-rtsx)
-- Trackpoint
+1. Download the latest release from this repository
+2. **Replace `AirportItlwm.kext**` with the version matching your target macOS (Monterey or Ventura)
+3. Prepare a USB installer with macOS
+4. Copy the `EFI` folder to the EFI partition of your USB drive
+5. Boot from USB and perform the installation
+6. After installation copy the EFI from USB to the EFI partition of the notebook drive
+7. Run OCLP if you are on Ventura for graphics patching
 
----
+Zde je aktualizovaná tabulka s přidaným ComboJackem
 
-## ❌ Not Working
+Pro tento model (Broadwell laptop) a obecně pro efektivní správu Hackintoshe bych doporučil doplnit tabulku o tyto nástroje, které jsou pro uživatele velmi praktické
 
-- **Fingerprint reader** (Validity/Elan – not supported by macOS)
-- Wake from fingerprint
+## 🛠 Recommended Utilities
 
----
-
-### 🎧 Audio Jack & Scrolling Enhancements
-
-If you need the **3.5 mm headphone jack** to work correctly (auto-switch between speakers and headphones),  
-install **[ComboJack]([https://github.com/macos86/ComboJack])** after macOS installation.  
-ComboJack enables proper headset detection and microphone support on Realtek audio codecs.
-
-For smoother and more natural **scrolling behavior**, you can also install  
-**[Discrete Scroll](https://github.com/emreyolcu/discrete-scroll)** — a lightweight tool that improves touchpad and mouse scroll responsiveness on macOS.
-
----
-
-## ⚙️ Included Kexts
-
-- [Lilu](https://github.com/acidanthera/Lilu)
-- [WhateverGreen](https://github.com/acidanthera/WhateverGreen)
-- [AppleALC](https://github.com/acidanthera/AppleALC)
-- [VirtualSMC](https://github.com/acidanthera/VirtualSMC)
-- [SMCBatteryManager](https://github.com/acidanthera/VirtualSMC)
-- [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2)
-- [IntelMausi](https://github.com/acidanthera/IntelMausi)
-- [AirportItlwm](https://github.com/OpenIntelWireless/itlwm)
-- [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
-- [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM)
-- [NVMeFix](https://github.com/acidanthera/NVMeFix)
-- [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx)
-
----
-
-## 🧩 ACPI Tables
-
-- `SSDT-AC.aml` – general ACPI fixes (wake, power, sleep integration)
-- `SSDT-EC-USBX.aml` – adds Embedded Controller device and USB power properties  
-- `SSDT-GPRW.aml` – fixes sleep/wake methods (_GPRW)  
-- `SSDT-HPET.aml` – IRQ conflicts fix for High Precision Event Timer  
-- `SSDT-OC-XOSI.aml` – improves OSI compatibility for macOS  
-- `SSDT-PNLF.aml` – enables display backlight control  
-- `SSDT-PTSWAK.aml` – proper sleep/wake flow handling  
-- `SSDT-SLPB.aml` – fixes sleep button behavior  
-
----
-
-## 🧰 OpenCore Configuration
-
-- **OpenCore Version:** 1.0.5 (Newest) 
-- **SMBIOS:** `MacBookAir7,1`  
-  _(generate your own serial numbers with `macserial`)_
-- **boot-args:**
-
-## 🧾 Project Status
-
-| Status | Details |
-|--------|----------|
-| macOS Compatibility | ✅ Monterey (12.x) ✅ Ventura (13.x) ✅ Sonoma (14.x) |
-| Stability | ✅ Daily-driver ready |
-| Audio Jack | ✅ With ComboJack |
-| Scrolling | ✅ With Discrete Scroll |
-
-## 📜 License
-
-This EFI is provided for educational and experimental purposes only.  
-Use at your own risk – the author is not responsible for any system damage or data loss.
-
-#### 💰 Crypto Donations  
-
-If you’d like to support my projects directly, you can donate via crypto:  
-**BTC:** `bc1q9923r0f892lyd7sqf2j82xax03gpf58sntnwjs`  
-**ETH:** `0x906cE31A56fb88ba202aed514CD7F36098e70A18`  
-**SOL:** `BUFJ1oyx55taCvYSvVoE2xoYyHTgTSAAAKYTapJfJg53`
+| Utility | Description | Download |
+| --- | --- | --- |
+| **Discrete Scroll** | Fixes scroll wheel acceleration and behavior for external mice on macOS | [GitHub Link](https://github.com/emreyolcu/discrete-scroll) |
+| **ComboJack** | Enables proper headset detection and popup menu for the combo audio jack | [GitHub Link](https://github.com/hoaug-tran/ComboJack) |
+| **Hackintool** | The swiss army knife for Hackintosh (diagnostics, USB mapping, kext checks) | [GitHub Link](https://github.com/benbaker76/Hackintool) |
+| **Stats** | Open source system monitor in menu bar (CPU, GPU, Battery, Sensors) | [GitHub Link](https://github.com/exelban/stats) |
+| **Rectangle** | Move and resize windows in macOS using keyboard shortcuts or snap areas | [GitHub Link](https://github.com/rxhanson/Rectangle) |
+| **ProperTree** | The best lightweight plist editor for OpenCore config files | [GitHub Link](https://github.com/corpnewt/ProperTree) |
 
 ## 🙌 Credits
 
