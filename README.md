@@ -51,7 +51,7 @@ Before installation ensure your BIOS is set as follows
 ## 📥 Installation
 
 1. Download the latest release from this repository
-2. **Replace `AirportItlwm.kext**` with the version matching your target macOS (Monterey or Ventura)
+2. **Replace `AirportItlwm.kext**` with the version matching your target macOS (If you will go higher than Ventura)
 3. Prepare a USB installer with macOS
 4. Copy the `EFI` folder to the EFI partition of your USB drive
 5. Boot from USB and perform the installation
