@@ -1,9 +1,8 @@
 # OpenCore EFI for Toshiba Portege Z30T-B (Ventura+) (STABLE)
 
-## ⚠️ About TheDeusRa Repo:
-(Updated OpenCore EFI) (Lost access to Original Account TheDeusRa)
+<img width="1920" height="1080" alt="Pink Black Gradient Motivational Desktop Wallpaper " src="https://github.com/user-attachments/assets/23c84d72-d084-42f8-8a81-829188b1a12a" />
 
-<img width="1920" height="1080" alt="BG" src="https://github.com/user-attachments/assets/c1f5ae95-dca0-4c86-94ea-3dfc5db68bbc" />
+## ⚠️ About TheDeusRa Repo: Lost access to Original Account!
 
 This repository contains a complete OpenCore EFI configuration for the Toshiba Portege Z30T-B, optimized specifically for macOS Ventura and newer versions using OpenCore Legacy Patcher for graphics support
 ---
