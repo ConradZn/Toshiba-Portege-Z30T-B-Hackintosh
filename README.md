@@ -52,6 +52,8 @@ Before installation ensure your BIOS is set as follows
 * **iServices:** iMessage and FaceTime are currently **broken/not working** on Sequoia due to changes in the OS structure and root patching
 * iCloud Drive, App Store and other Apple ID services work fine
 * Everything else (Graphics, Audio, WiFi) works stable  
+## The iServices / iMessage Fix:
+I initially reported that iMessage and FaceTime were broken on Sequoia with this setup but I found a solution It seems my main Apple ID was having issues solely with this specific SMBIOS/OS combo The Fix: I completely signed out of iCloud on the hackintosh and signed in with a different/fresh Apple ID and iMessage started working immediately along with FaceTime. So if you are struggling with iServices on Sequoia with OCLP, try testing a different account because the hardware/spoofing itself works fine. Remove all devices on iCloud on iPhone if you have any (Hackintoshs).
 ---
 * **Ventura (macOS 12)**
 * All iServices work correctly with valid SMBIOS
