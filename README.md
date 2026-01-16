@@ -52,7 +52,8 @@ Before installation ensure your BIOS is set as follows
 * **iServices:** iMessage and FaceTime are currently **broken/not working** on Sequoia due to changes in the OS structure and root patching
 * iCloud Drive, App Store and other Apple ID services work fine
 * Everything else (Graphics, Audio, WiFi) works stable
-
+  
+  --
 * **Ventura**
 * All iServices work correctly with valid SMBIOS
 
