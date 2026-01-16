@@ -1,4 +1,4 @@
-# OpenCore EFI for Toshiba Portege Z30T-B (Ventura+) (STABLE)
+# OpenCore EFI for Toshiba Portege Z30T-B (Ventura+)
 
 <img width="1920" height="1080" alt="Pink Black Gradient Motivational Desktop Wallpaper " src="https://github.com/user-attachments/assets/23c84d72-d084-42f8-8a81-829188b1a12a" />
 
