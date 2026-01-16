@@ -18,6 +18,8 @@ This repository contains a complete OpenCore EFI configuration for the Toshiba P
 | **Wi-Fi/BT** | Intel Wireless-AC 7265 | ✅ Working (with AirportItlwm) |
 | **Trackpad** | ALPS / Synaptics | ✅ Working (VoodooPS2) |
 
+<img width="1600" height="900" alt="Snímek obrazovky 2026-01-16 v 8 11 35" src="https://github.com/user-attachments/assets/4656535a-a0ce-4015-af61-c67a7c1252c5" />
+
 ## 🚀 macOS Ventura & Newer Support
 
 This EFI includes a specially tuned configuration file ensuring compatibility across versions
