@@ -2,9 +2,7 @@
 
 <img width="1920" height="1080" alt="Pink Black Gradient Motivational Desktop Wallpaper " src="https://github.com/user-attachments/assets/23c84d72-d084-42f8-8a81-829188b1a12a" />
 
-## ⚠️ About TheDeusRa Repo: Lost access to Original Account!
-
-This repository contains a complete OpenCore EFI configuration for the Toshiba Portege Z30T-B, optimized specifically for macOS Ventura and newer versions using OpenCore Legacy Patcher for graphics support
+This repository contains a complete OpenCore EFI configuration for the Toshiba Portege Z30T-B, optimized specifically for macOS Ventura, Sonoma and macOS Sequoia using OpenCore Legacy Patcher for graphics support
 ---
 
 ## 💻 Hardware Specifications
@@ -25,7 +23,6 @@ This repository contains a complete OpenCore EFI configuration for the Toshiba P
 This EFI includes a specially tuned configuration file ensuring compatibility across versions
 
 * **Ventura (macOS 13) and newer**
-* Booting is handled by the same EFI
 * **Important:** For full graphics acceleration on Broadwell (HD 5500) in Ventura, you must use **OpenCore Legacy Patcher (OCLP)** post-install
 * **[Download OCLP Here](https://github.com/dortania/OpenCore-Legacy-Patcher/releases)**
 * Kexts are configured not to block booting of newer systems
@@ -44,19 +41,28 @@ Before installation ensure your BIOS is set as follows
 
 **⚠️ Mandatory Installation Steps**
 
-* **SMBIOS Generation:** You **must generate** your own unique serial numbers (Serial, Board Serial, UUID) for model **MacBookPro14,1** using GenSMBIOS before booting to ensure iServices work and to avoid conflicts
-* **WiFi Kext:** Replace `AirportItlwm.kext` in `EFI/OC/Kexts` with the correct version for your specific OS (If you want newer version like Sonoma to Tahoe)
+* **SMBIOS Generation:** You **must generate** your own unique serial numbers (Serial, Board Serial, UUID) for model **MacBookPro14,1** using GenSMBIOS before booting to ensure iServices work and to avoid conflicts, **MacBookPro16,2** for Sequoia.
 * **Graphics:** Post-install patching using **OpenCore Legacy Patcher** is required to enable Intel HD 5500 graphics acceleration
+
+## 🐛 Known Issues
+
+* **macOS Sonoma/Sequoia (macOS 14/15)**
+* **iServices:** iMessage and FaceTime are currently **broken/not working** on Sequoia due to changes in the OS structure and root patching
+* iCloud Drive, App Store and other Apple ID services work fine
+* Everything else (Graphics, Audio, WiFi) works stable
+
+* **Ventura**
+* All iServices work correctly with valid SMBIOS
 
 ## 📥 Installation
 
 1. Download the latest release from this repository
-2. **Replace `AirportItlwm.kext**` with the version matching your target macOS (If you will go higher than Ventura)
-3. Prepare a USB installer with macOS**
-4. 4. Copy the `EFI` folder to the EFI partition of your USB drive
+2. **Generate SMBIOS:** Use GenSMBIOS to generate new Serial, Board Serial and UUID for **MacBookPro14,1** / **MacBookPro16,2**
+3. Prepare a USB installer with macOS
+4. Copy the `EFI` folder to the EFI partition of your USB drive
 5. Boot from USB and perform the installation
-6. After installation copy the EFI from USB to the EFI partition of the notebook drive
-7. Run OCLP if you are on Ventura for graphics patching
+6. **Disable SIP:** After install, boot into Recovery, open Terminal and run `csrutil disable` followed by `csrutil authenticated-root disable`, then restart
+7. **Run OCLP** immediately to patch graphics
 
 ## 🛠 Recommended Utilities
 
