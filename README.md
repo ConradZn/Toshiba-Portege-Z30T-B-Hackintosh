@@ -18,11 +18,13 @@ This repository contains a complete OpenCore EFI configuration for the Toshiba P
 | **Wi-Fi/BT** | Intel Wireless-AC 7265 | ✅ Working (with AirportItlwm) |
 | **Trackpad** | ALPS / Synaptics | ✅ Working (VoodooPS2) |
 
-<img width="1600" height="900" alt="Snímek obrazovky 2026-01-16 v 8 11 35" src="https://github.com/user-attachments/assets/4656535a-a0ce-4015-af61-c67a7c1252c5" />
-<img width="717" height="455" alt="Snímek obrazovky 2026-01-23 v 11 46 02" src="https://github.com/user-attachments/assets/1c90e86c-b102-47c9-9344-c38e04acdb94" />
-<img width="883" height="770" alt="Snímek obrazovky 2026-01-23 v 11 52 33" src="https://github.com/user-attachments/assets/8b213853-db05-4d88-a3f1-f67251ab3a9f" />
-<img width="883" height="770" alt="Snímek obrazovky 2026-01-23 v 11 53 52" src="https://github.com/user-attachments/assets/6a80e0fa-384d-4f94-976c-2a8252d11680" />
-<img width="1600" height="900" alt="Snímek obrazovky 2026-01-23 v 11 48 53" src="https://github.com/user-attachments/assets/1616f959-52d7-473c-90e5-14d3716901e2" />
+## 💻 Screenshots
+<details>
+  <summary>KClick to viewu</summary>
+  <img width="414" height="639" alt="Snímek obrazovky 2026-01-23 v 11 46 23" src="https://github.com/user-attachments/assets/9b9c3ea3-cfac-4b41-ad9f-8950ed8eb686" />
+<img width="883" height="770" alt="Snímek obrazovky 2026-01-23 v 11 52 33" src="https://github.com/user-attachments/assets/69ab4fbb-5afb-4df2-a20f-061fe1cbc14b" />
+<img width="883" height="770" alt="Snímek obrazovky 2026-01-23 v 11 53 52" src="https://github.com/user-attachments/assets/b5fbb30c-ff8a-4186-9888-9e2890548ed9" />
+</details>
 
 ## 🚀 macOS Ventura & Newer Support
 
