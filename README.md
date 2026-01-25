@@ -20,7 +20,7 @@ This repository contains a complete OpenCore EFI configuration for the Toshiba P
 
 ## 💻 Screenshots
 <details>
-  <summary>KClick to viewu</summary>
+  <summary>CLICK TO VIEW</summary>
   <img width="414" height="639" alt="Snímek obrazovky 2026-01-23 v 11 46 23" src="https://github.com/user-attachments/assets/9b9c3ea3-cfac-4b41-ad9f-8950ed8eb686" />
 <img width="883" height="770" alt="Snímek obrazovky 2026-01-23 v 11 52 33" src="https://github.com/user-attachments/assets/69ab4fbb-5afb-4df2-a20f-061fe1cbc14b" />
 <img width="883" height="770" alt="Snímek obrazovky 2026-01-23 v 11 53 52" src="https://github.com/user-attachments/assets/b5fbb30c-ff8a-4186-9888-9e2890548ed9" />
