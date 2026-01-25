@@ -19,6 +19,10 @@ This repository contains a complete OpenCore EFI configuration for the Toshiba P
 | **Trackpad** | ALPS / Synaptics | ✅ Working (VoodooPS2) |
 
 <img width="1600" height="900" alt="Snímek obrazovky 2026-01-16 v 8 11 35" src="https://github.com/user-attachments/assets/4656535a-a0ce-4015-af61-c67a7c1252c5" />
+<img width="717" height="455" alt="Snímek obrazovky 2026-01-23 v 11 46 02" src="https://github.com/user-attachments/assets/1c90e86c-b102-47c9-9344-c38e04acdb94" />
+<img width="883" height="770" alt="Snímek obrazovky 2026-01-23 v 11 52 33" src="https://github.com/user-attachments/assets/8b213853-db05-4d88-a3f1-f67251ab3a9f" />
+<img width="883" height="770" alt="Snímek obrazovky 2026-01-23 v 11 53 52" src="https://github.com/user-attachments/assets/6a80e0fa-384d-4f94-976c-2a8252d11680" />
+<img width="1600" height="900" alt="Snímek obrazovky 2026-01-23 v 11 48 53" src="https://github.com/user-attachments/assets/1616f959-52d7-473c-90e5-14d3716901e2" />
 
 ## 🚀 macOS Ventura & Newer Support
 
@@ -43,25 +47,16 @@ Before installation ensure your BIOS is set as follows
 
 **⚠️ Mandatory Installation Steps**
 
-* **SMBIOS Generation:** You **must generate** your own unique serial numbers (Serial, Board Serial, UUID) for model **MacBookPro14,1** using GenSMBIOS before booting to ensure iServices work and to avoid conflicts, **MacBookPro16,2** for Sequoia.
+* **SMBIOS Generation:** You **must generate** your own unique serial numbers (Serial, Board Serial, UUID) using GenSMBIOS before booting to ensure iServices work and to avoid conflicts.
 * **Graphics:** Post-install patching using **OpenCore Legacy Patcher** is required to enable Intel HD 5500 graphics acceleration
 
 ## 🐛 Known Issues
-
-* **macOS Sonoma/Sequoia (macOS 14/15)**
-* **iServices:** iMessage and FaceTime are currently **broken/not working** on Sequoia due to changes in the OS structure and root patching
-* iCloud Drive, App Store and other Apple ID services work fine
-* Everything else (Graphics, Audio, WiFi) works stable  
-* The iServices / iMessage Fix:**
-I initially reported that iMessage and FaceTime were broken on Sequoia with this setup but I found a solution It seems my main Apple ID was having issues solely with this specific SMBIOS/OS combo The Fix: I completely signed out of iCloud on the hackintosh and signed in with a different/fresh Apple ID and iMessage started working immediately along with FaceTime. So if you are struggling with iServices on Sequoia with OCLP, try testing a different account because the hardware/spoofing itself works fine. Remove all devices on iCloud on iPhone if you have any (Hackintoshs).
----
-* **Ventura (macOS 12)**
-* All iServices work correctly with valid SMBIOS
+* AirDrop works only one way
 
 ## 📥 Installation
 
 1. Download the latest release from this repository
-2. **Generate SMBIOS:** Use GenSMBIOS to generate new Serial, Board Serial and UUID for **MacBookPro14,1** / **MacBookPro16,2**
+2. **Generate SMBIOS:** Use GenSMBIOS to generate new Serial, Board Serial and UUID
 3. Prepare a USB installer with macOS
 4. Copy the `EFI` folder to the EFI partition of your USB drive
 5. Boot from USB and perform the installation
